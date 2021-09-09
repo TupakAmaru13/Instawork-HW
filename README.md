@@ -1,4 +1,7 @@
 # Instawork take-home assignment
+## Author
+Tatiana Volk, [tatiana.volk@gmail.com](mailto:tatiana.volk@gmail.com)
+
 ## Requriements
 (copied from the document sent to me)
 
@@ -24,6 +27,8 @@ dates match the input data).
 Orbitz's interface seems to have changed since the assignment was created. Most
 of the second half of the steps look and work differently now. I chose to implement the test in
 accordance to the actual interface, following the spirit of the requirements rather than the letter.
+
+There's some flakiness around selecting the flight dates, which probably needs further investigation.
 
 ### Set up
 The test is implemented in Python, using `behave` and `selenium`. Before running the test, a `python` executable

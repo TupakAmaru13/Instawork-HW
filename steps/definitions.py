@@ -1,6 +1,5 @@
-from behave import step, then, when
+from behave import step, then
 from datetime import datetime, timedelta
-from time import sleep
 from pages.mainpage import MainPage
 from pages.flightsresult import FlightsResultsPage
 from pages.orderconfirmation import ConfirmationPage
@@ -94,7 +93,8 @@ def confirm_return_flight(context):
     context.return_flight_info = flight_info
     context.price = page.get_expected_price()
     page.confirm_flight_selection()
-    context.browser.switch_to_window(context.browser.window_handles[1]) # new tab was opened
+    # new tab was opened, switch to it
+    context.browser.switch_to_window(context.browser.window_handles[1])
 
 
 @then("Assert flight details")
